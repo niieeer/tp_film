@@ -1,1 +1,59 @@
+@font-face {
+    font-family: "arcane";
+    src: url("../font/arcane.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
 /* HEADER */
+
+.main-header {
+    background-color: rgb(20, 20, 20);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+    color: rgb(255, 255, 255);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Helvetica";
+}
+
+a:hover {
+    color: #e5e5e5;
+}
+
+nav {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding-right: 30px;
+}
+
+h1 {
+    color: #e50914;
+    font-family: "arcane";
+    width: 100%;
+    align-items: center;
+    display: flex;
+    margin-left: 1%;
+}
