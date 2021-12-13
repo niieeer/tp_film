@@ -17,8 +17,6 @@ session_start();
     <title>Document</title>
 </head>
 
-
-
 <body>
     <?php include_once('../includes/header.php'); ?>
     <div>
