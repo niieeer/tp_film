@@ -1,7 +1,7 @@
 <header class="main-header">
-    <nav>
-        <div>
-            <h1> WATI-STREAM</h1>
+    <nav class="navbar">
+        <div class="navbar__logo">
+           <a href="http://localhost/tp_film/index.php"> <h1> WATI-STREAM</h1> </a>
         </div>
         <ul>
             <li>
