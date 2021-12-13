@@ -8,18 +8,20 @@ async function getMovie() {
   return movies;
 }
 
-getMovie().then((response) => {
-  const movie = response;
-  $(".movie-container").append(`<div>
+window.addEventListener("DOMContentLoaded", async () => {
+  getMovie().then((response) => {
+    const movie = response;
+    $(".movie-container").append(`<div>
  <h2>${movie.title}</h2>
   <img src= "http://image.tmdb.org/t/p/w300/${movie.poster_path}">
   <p>${movie.overview}</p>
   <p>${movie.original_language}</p>
   <p>${movie.vote_average}</p>
   </div>`);
-  $(".movie-container").append(`<div id="genres"></div>`);
-  movie.genres.forEach((element) => {
-    $("#genres").append(`<p>${element.name}</p>`);
+    $(".movie-container").append(`<div id="genres"></div>`);
+    movie.genres.forEach((element) => {
+      $("#genres").append(`<p>${element.name}</p>`);
+    });
   });
 });
 

@@ -10,10 +10,12 @@ async function getMovies() {
 getMovies().then((response) => {
   const movies = response.results;
   movies.forEach((movie) => {
-    $(".movies_container")
-      .append(`<div><a href="/tp_film/views/movie.php?id=${movie.id}" id="ma_list">${movie.title}</a>
-          <img src= "http://image.tmdb.org/t/p/w300/${movie.poster_path}">
-          </div>`);
+    $(".movies_container").append(
+      `<div>
+      <a href="/tp_film/views/movie.php?id=${movie.id}" id="ma_list">${movie.title}</a>
+    <img src= "http://image.tmdb.org/t/p/w300/${movie.poster_path}">
+  </div>`
+    );
   });
 });
 
