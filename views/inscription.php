@@ -16,7 +16,7 @@
 <body>
     <?php include_once('../includes/header.php'); ?>
     <div id="inscription">
-        <form class="inscription" action="../controller/inscription.php?type=add" method="post">
+        <form id="inscription" action="../controller/inscription.php?type=add" method="post">
             <h2>Inscription</h2>
             <label>Pseudo :</label>
             <input type="text" name="user" autofocus maxlength="15" pattern="^[a-z0-9]+$" required placeholder="xxtristanxx">

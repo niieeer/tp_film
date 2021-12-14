@@ -16,9 +16,7 @@
 
 <body>
     <div id="inscription">
-
-
-        <form class="inscription" action="../controller/connexion.php" method="post">
+        <form id="inscription" action="../controller/connexion.php" method="post">
             <h2>Se connecter</h2>
             <label>Pseudo :</label>
             <input type="text" name="pseudo" autofocus maxlength="15" pattern="^[a-z0-9]+$" required>

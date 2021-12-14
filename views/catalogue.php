@@ -16,9 +16,8 @@
 
 <body>
     <?php include_once('../includes/header.php'); ?>
-    <!-- <div id="tags">
-        
-        </div> -->
+    <div id="tags">
+    </div>
     <form id="searchForm">
         <input type="text" class="form-control" id="searchText" placeholder="Recherche un film">
     </form>
@@ -29,6 +28,7 @@
 </body>
 <!-- <script src="../js/getGenre.js  "></script> -->
 <script src="../js/search.js"></script>
+<script src="../js/getGenre.js"></script>
 
 
 </html>

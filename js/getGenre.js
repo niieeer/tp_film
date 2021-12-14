@@ -1,11 +1,7 @@
-async function getGenre() {
-  let movies = await fetch(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=8ef726b0d448ac5baef1bcf1fdbc77ae&language=en-US"
-  ).then((response) => response.json());
+// APIKEY pour l'api
+const APIKEY = "api_key=8ef726b0d448ac5baef1bcf1fdbc77ae";
 
-  return movies;
-}
-
+// Tableau des genres de l'api
 const genres = [
   {
     id: 28,
@@ -84,7 +80,11 @@ const genres = [
     name: "Western",
   },
 ];
+
+// Récupération de l'element(div) tags
 const tags = document.getElementById("tags");
+
+// Iteration sur le tableau de genre pour les affichers sur la page
 
 function setGenre() {
   tags.innerHTML = "";
@@ -96,4 +96,22 @@ function setGenre() {
     tags.append(t);
   });
 }
+
 setGenre();
+
+// Récuperation de l'id du tag quand l'utilisateur click sur le button
+document.querySelectorAll(".tag").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const select_id = e.target.getAttribute("id");
+    searchGenres(select_id);
+  });
+});
+
+//Fetch de l'api en ajoutant la clé id du genre
+function searchGenres(select_id) {
+  return fetch(
+    `https://api.themoviedb.org/3/discover/movie?${APIKEY}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_genres=${select_id}&with_watch_monetization_types=flatrate`
+  ).then((response) => response.json());
+}
+
+searchGenres();

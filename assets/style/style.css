@@ -55,6 +55,7 @@ body {
 footer {
   margin-top: 40px;
 }
+
 /* HEADER */
 
 .main-header {
@@ -99,6 +100,7 @@ h1 {
   margin-left: 1%;
   font-size: 40px;
 }
+
 /* FOOTER */
 
 footer {
@@ -174,6 +176,7 @@ footer {
 .fab {
   margin-top: 6px;
 }
+
 /* inscription */
 
 #inscription {
@@ -236,6 +239,7 @@ input[type="email"] {
 .inscription p {
   margin-top: 10px;
 }
+
 /* AFFICHAGE DES FILMS EN FLEX BOX */
 
 .movies_container a {
@@ -264,6 +268,7 @@ input[type="email"] {
   color: black;
   text-align: center;
 }
+
 /* AFFICHAGE D'UN FILM SELECTIONNÉ */
 
 .movie-container {
@@ -309,4 +314,26 @@ input[type="email"] {
   font-weight: normal;
   font-style: italic;
 }
+
 /* MENU BURGER POUR VERSION MOBILE */
+
+/* Catalogue */
+
+#tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: solid rgb(0, 0, 0) 1px;
+  margin: 5px;
+  padding: 5px;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+}
